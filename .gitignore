@@ -1,0 +1,7 @@
+conventions
+*.tex
+*.aux
+*.log
+*.gz
+*.out
+
