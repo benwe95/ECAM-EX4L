@@ -77,17 +77,22 @@ int main (int c, char *v[]) {
    DIR *newDir;
    char *p;
    char *q;
-   printf("c: %d\n",c);
    struct stat fileStat;
    char buf[PATH_MAX + 1];
 
    if (c < 2) {
-       printf ("Usage: ./test2 <dirname> <ext>\n");
+       printf ("Usage: ./listf <dirname> <ext>\n");
+			 printf("usage: listf <dirname> <ext> --Display the n files in a dirname with ext--\n" \
+								 "  ----- Argument -----\n" \
+								 "  dirname \tPrecises the directory.\n"\
+								 "  ext \tPrecises the extension.\n"\
+								 "\n\tExample: listf /jonh js   --Display all files with .js extension--\n"\
+								 "\n\tExample: listf /jonh all --Display all files--\n"\
+								 );
        return 1;
    }
-   printf("v[0]: %s\n", v[0]);
-   printf("v[1]: %s\n", v[1]);
-   printf("v[2]: %s\n", v[2]);
+   printf("dirname: %s\n", v[1]);
+   printf("extension: %s\n", v[2]);
 
    openAndGet(v[1],v[2]);
 
