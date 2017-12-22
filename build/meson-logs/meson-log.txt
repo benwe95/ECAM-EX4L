@@ -1,0 +1,14 @@
+Build started at 2017-12-22T13:33:24.487921
+Main binary: /usr/local/opt/python3/bin/python3.6
+Python system: Darwin
+The Meson build system
+Version: 0.44.0
+Source dir: /Users/jonh/Documents/Dev/ECAM-EX4L
+Build dir: /Users/jonh/Documents/Dev/ECAM-EX4L/build
+Build type: native build
+Project name: shell
+Native C compiler: cc (clang 9.0.0)
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Build targets in project: 3
+Found ninja-1.8.2 at /usr/local/bin/ninja

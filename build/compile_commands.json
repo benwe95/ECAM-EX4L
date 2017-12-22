@@ -1,0 +1,17 @@
+[
+  {
+    "directory": "/Users/jonh/Documents/Dev/ECAM-EX4L/build",
+    "command": "cc  -Irecent@exe -I. -I.. -Xclang -fcolor-diagnostics -pipe -Wall -Winvalid-pch -O0 -g -MMD -MQ 'recent@exe/recent_recent.c.o' -MF 'recent@exe/recent_recent.c.o.d' -o 'recent@exe/recent_recent.c.o' -c ../recent/recent.c",
+    "file": "../recent/recent.c"
+  },
+  {
+    "directory": "/Users/jonh/Documents/Dev/ECAM-EX4L/build",
+    "command": "cc  -Ishell@exe -I. -I.. -Xclang -fcolor-diagnostics -pipe -Wall -Winvalid-pch -O0 -g -MMD -MQ 'shell@exe/shell_shell.c.o' -MF 'shell@exe/shell_shell.c.o.d' -o 'shell@exe/shell_shell.c.o' -c ../shell/shell.c",
+    "file": "../shell/shell.c"
+  },
+  {
+    "directory": "/Users/jonh/Documents/Dev/ECAM-EX4L/build",
+    "command": "cc  -Ilistf@exe -I. -I.. -Xclang -fcolor-diagnostics -pipe -Wall -Winvalid-pch -O0 -g -MMD -MQ 'listf@exe/listf_listf.c.o' -MF 'listf@exe/listf_listf.c.o.d' -o 'listf@exe/listf_listf.c.o' -c ../listf/listf.c",
+    "file": "../listf/listf.c"
+  }
+]
