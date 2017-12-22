@@ -32,30 +32,38 @@ void openAndGet(char dir[],char extension[]){
       else
       {
         //get position of the last "." and then read from after the point to the end
-        //char *initialdot = strtok(pDirent->d_name,".");
         char *dot = strtok(pDirent->d_name,".");
         while (dot != NULL){
           p = dot;
           dot = strtok(NULL,".");
         }
+        // test if the current object is a dir or a file
+        //  if it's a directory: put isDir to 1, so we don't add an extension
         if (p == pDirent->d_name){
           isDir = 1;
+          //  write the total path to the directory
           char firstpath[100], middlepath[5], lastpath[100];
           strcpy(firstpath,dir);
           strcpy(middlepath,"/");
           strcpy(lastpath,pDirent->d_name);
           strcat(firstpath,middlepath);
           strcat(firstpath,lastpath);
+          //  open the directory and start the function on it
           openAndGet(firstpath,extension);
         }
+        // if we ask for all extensions, print all files and directories
         if (strncmp(extension,"all",50)==0){
+          // print the name of the file
           printf("%s/%s",dir,pDirent->d_name);
           if (isDir == 0 && strncmp(".DS_Store",pDirent->d_name,50)!=0)
+            // print the extension
             printf(".%s\n",p);
           else
             printf("\n");
         }
+        // else, print files which correspond to the given extension
         else if (strncmp(p,extension,50)==0){
+          // print the filename with extension
           printf("%s/%s.%s\n",dir,pDirent->d_name,extension);
         }
       }
@@ -70,15 +78,6 @@ void openAndGet(char dir[],char extension[]){
 }
 
 int main (int c, char *v[]) {
-   int len;
-   struct dirent *pDirent;
-   struct dirent *newDirent;
-   DIR *pDir;
-   DIR *newDir;
-   char *p;
-   char *q;
-   struct stat fileStat;
-   char buf[PATH_MAX + 1];
 
    if (c < 2) {
        printf ("Usage: ./listf <dirname> <ext>\n");
